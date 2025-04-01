@@ -45,18 +45,13 @@ public class GamePlayer : MonoBehaviour
             {
                 IsPlaying = false;
             }
-
-            if (isitem)
-            {
-                Debug.Log("Item Check");
-                //아이템을 먹었다.
-                Score = Score + 1;
-
-            }
-
-            Destroy(other.gameObject);
-
         }
-
+        if (isitem)
+        {
+            Debug.Log("Item Check");
+            //아이템을 먹었다.
+            Score = Score + 1;
+        }
+        Destroy(other.gameObject);
     }
 }
